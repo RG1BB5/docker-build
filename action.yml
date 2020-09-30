@@ -1,0 +1,9 @@
+name: 'Build and Run docker'
+description: 'Build and run docker image'
+inputs:
+  dockerfile:  # id of input
+    description: 'Dockerfile of the image you would like to create'
+    required: true
+runs:
+  using: 'docker'
+  image: ${{ inputs.dockerfile }}
